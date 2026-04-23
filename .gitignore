@@ -1,0 +1,12 @@
+site/
+__pycache__/
+*.pyc
+
+.claude/
+.github/
+
+
+# env
+.python-version
+uv.lock
+.venv/

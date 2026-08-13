@@ -1,4 +1,13 @@
-# 词法分析
+# 第二章 词法分析
+
+<div class="course-nav" markdown>
+
+[返回首页](../../index.md){ .md-button }
+[上一章](01-Overview.md){ .md-button }
+<span class="md-button md-button--disabled">下一章</span>
+
+</div>
+
 ## 1. 词法分析器的作用
 ### 1.1 overview
 - 读入源程序字符流，输出token（词法单元）序列

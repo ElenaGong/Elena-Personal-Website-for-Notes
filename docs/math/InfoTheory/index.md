@@ -1,5 +1,9 @@
 # 信息论
 
-数学课程笔记入口。
+北京大学2026春王立威老师信息论课堂笔记。
 
-目前内容整理中，后续会补充信息论相关章节。
+<div class="course-nav" markdown>
+
+[返回首页](../../index.md){ .md-button .md-button--primary }
+
+</div>

@@ -2,33 +2,27 @@
 
 欢迎来到我的本科学习笔记网站。
 
-## 学科导航
+## 课程入口
 
-<div class="grid cards" markdown>
+<div class="course-portal">
 
-- :material-math-integral-box:{ .lg .middle } **数学**
+<a class="course-card course-card--math" href="math/InfoTheory/">
+  <span class="course-card__title">信息论</span>
+  <span class="course-card__desc">26 spring, wlw</span>
+  <span class="course-card__action">进入课程</span>
+</a>
 
-    ---
+<a class="course-card course-card--cs" href="cs/CompilerPrinciples/">
+  <span class="course-card__title">编译原理</span>
+  <span class="course-card__desc">26 spring, lxh</span>
+  <span class="course-card__action">进入课程</span>
+</a>
 
-    信息论、数值分析
-
-    [:octicons-arrow-right-24: 查看笔记](math/index.md)
-
-- :material-laptop:{ .lg .middle } **计算机科学**
-
-    ---
-
-    编译原理、软件基础
-
-    [:octicons-arrow-right-24: 查看笔记](cs/index.md)
-
-- :material-brain:{ .lg .middle } **人工智能**
-
-    ---
-
-    课程内容持续更新中
-
-    [:octicons-arrow-right-24: 查看笔记](ai/index.md)
+<a class="course-card course-card--cs" href="cs/SoftwareFoundations/">
+  <span class="course-card__title">软件基础</span>
+  <span class="course-card__desc">26 spring, xyf</span>
+  <span class="course-card__action">进入课程</span>
+</a>
 
 </div>
 

@@ -1,6 +1,118 @@
 /* 自定义样式 */
 
-/* 首页卡片网格 */
+/* 首页学科卡片网格 */
 .md-typeset .grid.cards > ul > li {
   border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.course-portal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 12rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.14);
+  border-color: color-mix(in srgb, var(--md-primary-fg-color) 40%, transparent);
+}
+
+.course-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -2rem auto;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  filter: blur(4px);
+}
+
+.course-card--math {
+  background: linear-gradient(135deg, rgba(45, 125, 214, 0.12), rgba(45, 125, 214, 0.04));
+}
+
+.course-card--cs {
+  background: linear-gradient(135deg, rgba(34, 163, 115, 0.14), rgba(34, 163, 115, 0.04));
+}
+
+.course-card--ai {
+  background: linear-gradient(135deg, rgba(160, 97, 255, 0.14), rgba(160, 97, 255, 0.04));
+}
+
+.course-card__track {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.course-card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.course-card__desc {
+  flex: 1;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  opacity: 0.88;
+}
+
+.course-card__action {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+.course-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.course-nav .md-button {
+  margin: 0;
+}
+
+.course-nav .md-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .course-card {
+    min-height: 10.5rem;
+    padding: 1.25rem;
+  }
+
+  .course-card__title {
+    font-size: 1.35rem;
+  }
 }

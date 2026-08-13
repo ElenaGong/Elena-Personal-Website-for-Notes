@@ -1,7 +1,7 @@
 site_name: My Study Notes
 site_url: https://ElenaGong.github.io/Elena-Personal-Website-for-Notes
 site_description: 本科学习笔记
-site_author: Your Name
+site_author: Elena
 
 repo_name: ElenaGong/Elena-Personal-Website-for-Notes
 repo_url: https://github.com/ElenaGong/Elena-Personal-Website-for-Notes.git
@@ -9,31 +9,41 @@ repo_url: https://github.com/ElenaGong/Elena-Personal-Website-for-Notes.git
 theme:
   name: material
   language: zh
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: 切换至暗色模式
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: 切换至亮色模式
-  font:
-    text: Noto Sans SC
-    code: JetBrains Mono
+  static_templates:
+    - 404.html
+  favicon: images/favicon.ico
+  apple-touch-icon-precomposed: images/mobile_icon.png
+  include_search_page: false
+  search_index_only: true
+
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - header.autohide
+    - navigation.tracking
     - navigation.top
-    - search.suggest
     - search.highlight
-    - content.code.copy
+    - search.share
+    - search.suggest
     - content.code.annotate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  font:
+    text: Roboto Slab
+    code: Roboto Mono
   icon:
     repo: fontawesome/brands/github
 
@@ -81,18 +91,15 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ElenaGong
+      link: https://ElenaGong.github.io/Elena-Personal-Website-for-Notes/
 
+# 新增 .md 文件不会自动出现在导航栏，必须同步在 mkdocs.yml 的 nav: 里登记
 nav:
   - 首页: index.md
-  - 数学:
-      - 概述: math/index.md
-      - 信息论: math/InfoTheory/index.md
-      - 数值分析: math/NumericalAnalysis/index.md
-  - 计算机科学:
-      - 概述: cs/index.md
-      - 编译原理: cs/CompilerPrinciples/index.md
-      - 软件基础: cs/SoftwareFoundations/index.md
-  - 人工智能:
-      - 概述: ai/index.md
+  - 信息论: math/InfoTheory/index.md
+  - 编译原理:
+    - 概述: cs/CompilerPrinciples/index.md
+    - 第一章 课程概览: cs/CompilerPrinciples/01-Overview.md
+    - 第二章 词法分析: cs/CompilerPrinciples/02-LexicalAnalysis.md
+  - 软件科学基础: cs/SoftwareFoundations/index.md
   - 关于: about.md
